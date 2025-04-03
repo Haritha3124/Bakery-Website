@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Namma Ooru Bakery</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <script src="./script.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <span class="website-name">Namma Ooru Bakery</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#welcome-section">Home</a></li>
+                <li><a href="#about-us">About Us</a></li>
+                <li><a href="#popular-dishes">Menu</a></li>
+                <li><a href="#seasonal-items">Specialities</a></li>
+            </ul>
+        </nav>
+        <div class="mobile-menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="mobile-menu-backdrop"></div>
+    </header>
+    <section id="welcome-section">
+        <div class="welcome-content">
+            <h1>“Bringing Tradition to Your Table”</h1>
+            <p>
+                Taste the rich flavors of Tamil Nadu from the comfort of your home!  
+                Our platform connects you with authentic, home-cooked traditional dishes, ensuring freshness, affordability, and the taste of love in every bite.
+            </p>
+            <a href="#popular-dishes" class="explore-btn">View More Menu</a>
+        </div>
+    </section>
+    
+    <section id="home" class="slideshow-container">
+        <div class="slide active">
+            <div class="slide-content">
+                <img src="images/prupi.png" alt="Ellu Urundai">
+                <div class="description">
+                    <h2>Ellu Urundai (Sesame Jaggery Balls)</h2>
+                    <p>Enjoy the traditional Tamil Nadu sweet made with roasted sesame seeds and jaggery, offering a crunchy and nutritious treat filled with authentic flavors.</p>
+                </div>
+            </div>
+        </div>        
+        <div class="slide">
+            <div class="slide-content">
+                <img src="images/paniyaram.png" alt="Panniyaram">
+                <div class="description">
+                    <h2>Delicious Kuzhi Panniyaram</h2>
+                    <p>Soft, crispy, and flavorful, our Kuzhi Panniyaram is made from fermented rice and urad dal batter, served with a variety of chutneys. A must-try South Indian delicacy!</p>
+                </div>
+            </div>
+        </div>
+        <div class="slide">
+            <div class="slide-content">
+                <img src="images/sweet panniyaram.png" alt="Sweet Panniyaram">
+                <div class="description">
+                    <h2>Sweet Panniyaram</h2>
+                    <p>Indulge in the rich taste of our Sweet Panniyaram, made with jaggery and coconut. A perfect blend of crispy outside and soft inside, satisfying your sweet tooth.</p>
+                </div>
+            </div>
+        </div>
+        <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+        <button class="next" onclick="changeSlide(1)">&#10095;</button>
+    </section>
+    <section id="about-us" class="about-us">
+        <h2>About Us</h2>
+        <p>
+            <strong>Namma Ooru Bakery</strong> is more than just a bakery – it's a celebration of authentic Tamil flavors. 
+            Rooted in tradition, we bring you time-honored recipes crafted with passion and the finest ingredients. 
+            Every bite reflects the warmth of home and the richness of our heritage.
+        </p>
+        <p>
+            Whether it's a festive delight or a simple craving, our handcrafted sweets and snacks bring you the 
+            true taste of Tamil Nadu, made with love and perfection.
+        </p>
+    </section>
+    <section id="popular-dishes" class="popular-dishes">
+        <h2>Our Menu</h2>
+        <div class="dishes-container">
+            <div class="dish-card">
+                <img src="images/halwa.png" alt="Halwa">
+                <div class="dish-info">
+                    <h3>Halwa</h3>
+                </div>
+            </div>
+            <div class="dish-card">
+                <img src="images/kesari.png" alt="Kesari">
+                <div class="dish-info">
+                    <h3>Kesari</h3>
+                </div>
+            </div>
+            <div class="dish-card">
+                <img src="images/laddu.png" alt="Laddu">
+                <div class="dish-info">
+                    <h3>Laddu</h3>
+                </div>
+            </div>
+            <div class="dish-card">
+                <img src="images/puttu.png" alt="Puttu">
+                <div class="dish-info">
+                    <h3>Puttu</h3>
+                </div>
+            </div>
+            <div class="dish-card">
+                <img src="images/somos.png" alt="Somas">
+                <div class="dish-info">
+                    <h3>Somas</h3>
+                </div>
+            </div>
+            <div class="dish-card">
+                <img src="images/mysorepak.png" alt="Mysore Pak">
+                <div class="dish-info">
+                    <h3>Mysore Pak</h3>
+                </div>
+            </div>
+            <div class="dish-card">
+                <img src="images/jamun.png" alt="Jamun">
+                <div class="dish-info">
+                    <h3>Jamun</h3>
+                </div>
+            </div>
+            <div class="dish-card">
+                <img src="images/achumuruku.png" alt="Achumuruku">
+                <div class="dish-info">
+                    <h3>Achumuruku</h3>
+                </div>
+            </div>
+            <div class="dish-card">
+                <img src="images/thattai.png" alt="Thattai">
+                <div class="dish-info">
+                    <h3>Thattai</h3>
+                </div>
+            </div>
+            <div class="dish-card">
+                <img src="images/panipuri.png" alt="Pani Puri">
+                <div class="dish-info">
+                    <h3>Pani Puri</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="seasonal-items" class="timeline-section">
+        <h2>Seasonal Specialities</h2>
+        <div class="timeline">
+            <div class="timeline-item left">
+                <div class="timeline-content">
+                    <h3>Pongal Special</h3>
+                    <p>Indulge in our authentic <strong>Sakkarai Pongal</strong> and crispy <strong>Thenkuzhal Murukku</strong>, crafted to celebrate the harvest festival.</p>
+                    <span class="timeline-date">January</span>
+                </div>
+            </div>
+            <div class="timeline-item right">
+                <div class="timeline-content">
+                    <h3>Summer Coolers</h3>
+                    <p>Enjoy refreshing <strong>Elaneer Payasam</strong> and <strong>Neer Mor</strong> to beat the summer heat.</p>
+                    <span class="timeline-date">April - June</span>
+                </div>
+            </div>
+            <div class="timeline-item left">
+                <div class="timeline-content">
+                    <h3>Diwali Delights</h3>
+                    <p>Celebrate with rich and crispy <strong>Adhirasam</strong>, <strong>Mysore Pak</strong>, and <strong>Laddu</strong>, made with traditional flavors.</p>
+                    <span class="timeline-date">October - November</span>
+                </div>
+            </div>
+            <div class="timeline-item right">
+                <div class="timeline-content">
+                    <h3>Christmas Treats</h3>
+                    <p>Delight in special <strong>Plum Cake</strong> and <strong>Jangiri</strong>, perfect for the festive season.</p>
+                    <span class="timeline-date">December</span>
+                </div>
+            </div>
+        </div>
+    </section>  
+    </section>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-about">
+                <div class="contact-info">
+                    <h2>Contact Us</h2>
+                    <p><strong>📍 Address:</strong> Pochampalli,Krishnagiri,Tamilnadu</p>
+                    <p><strong>📞 Phone:</strong> +91 99659 56117</p>
+                    <p><strong>📧 Email:</strong> support@tasteoftamil.com</p>
+                </div>
+                <h3>Taste of Tamil</h3>
+                <p>Bringing you the authentic taste of South Indian delicacies with love and tradition.</p>
+                <p>&copy; 2025 Taste of Tamil. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
