@@ -1,6 +1,4 @@
-// Wait for the document to load before running animations
 document.addEventListener("DOMContentLoaded", () => {
-    // Parallax effect for header background
     gsap.to("header", {
         yPercent: -5,
         ease: "none",
@@ -8,13 +6,11 @@ document.addEventListener("DOMContentLoaded", () => {
             trigger: "header",
             start: "top top",
             end: "200 top",
-            scrub: 0.5 // Adjusting the scrub value for smoothness
+            scrub: 0.5 
         }
     });
-
-    // Parallax effect for sections with background images
     gsap.to("#welcome-section", {
-        backgroundPositionY: "30%", // Adjust the position for a parallax effect
+        backgroundPositionY: "30%", 
         ease: "none",
         scrollTrigger: {
             trigger: "#welcome-section",
@@ -35,10 +31,8 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    // Fade-in animation for header
     gsap.from("header", { opacity: 0,y:-20, duration: 1, ease: "power2.out" });
 
-    // Welcome content slide-in with parallax
     gsap.from("#welcome-section .welcome-content", {
         opacity: 0,
         y: 50,
@@ -47,8 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
         ease: "power2.out"
     });
 
-    // Slide-in animation for slideshow images with initial hide
-    gsap.set(".slideshow-container .slide", { opacity: 0, scale: 0.9 }); // Set slides to hidden initially
+    gsap.set(".slideshow-container .slide", { opacity: 0, scale: 0.9 });
     gsap.fromTo(".slideshow-container .slide.active", {
         opacity: 0,
         scale: 0.9,
@@ -61,7 +54,6 @@ document.addEventListener("DOMContentLoaded", () => {
         ease: "power2.out"
     });
 
-    // Fade-in animation for popular dishes with parallax effect
     gsap.from(".dish-card", {
         opacity: 0,
         scale: 0.8,
@@ -75,7 +67,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    // Slide-in effect for registration & login section with a slight 3D effect
     gsap.from(".form-container", {
         opacity: 0,
         x: -100,
@@ -89,7 +80,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    // Contact info fade-in animation with a 3D lift effect
     gsap.from(".contact-info", {
         opacity: 0,
         y: 50,
@@ -102,7 +92,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    // Smooth navigation scroll effect
     document.querySelectorAll("nav ul li a").forEach(anchor => {
         anchor.addEventListener("click", function (e) {
             e.preventDefault();
@@ -111,17 +100,15 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // GSAP slideshow functionality with 3D effects
     let currentSlide = 0;
     const slides = document.querySelectorAll(".slide");
     const totalSlides = slides.length;
 
     function changeSlide(n) {
-        slides[currentSlide].classList.remove("active"); // Remove active class
+        slides[currentSlide].classList.remove("active"); 
         currentSlide = (currentSlide + n + totalSlides) % totalSlides;
-        slides[currentSlide].classList.add("active"); // Add active class
+        slides[currentSlide].classList.add("active"); 
 
-        // Animating current slide out and new slide in with 3D effect
         gsap.fromTo(slides[currentSlide],
             { opacity: 0, scale: 0.9, rotateY: 60 },
             { opacity: 1, scale: 1, rotateY: 0, duration: 1, ease: "power2.out" });
@@ -134,7 +121,6 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelector(".prev").addEventListener("click", () => changeSlide(-1));
     document.querySelector(".next").addEventListener("click", () => changeSlide(1));
 
-    // Add hover effects on dish cards
     const dishCards = document.querySelectorAll('.dish-card');
     dishCards.forEach(card => {
         card.addEventListener('mouseenter', () => {
@@ -145,7 +131,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // Add hover effects on navigation links
     document.querySelectorAll("nav ul li a").forEach(link => {
         link.addEventListener('mouseenter', () => {
             gsap.to(link, { scale: 1.1, duration: 0.3 });
@@ -171,7 +156,6 @@ document.addEventListener('DOMContentLoaded', function() {
             document.body.style.overflow = nav.classList.contains('active') ? 'hidden' : '';
         });
 
-        // Close when clicking backdrop
         backdrop.addEventListener('click', function() {
             menuToggle.classList.remove('active');
             nav.classList.remove('active');
@@ -179,7 +163,6 @@ document.addEventListener('DOMContentLoaded', function() {
             document.body.style.overflow = '';
         });
 
-        // Close when clicking links
         document.querySelectorAll('nav a').forEach(link => {
             link.addEventListener('click', function() {
                 if (window.innerWidth <= 992) {
